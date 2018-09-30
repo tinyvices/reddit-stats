@@ -1,0 +1,8 @@
+---
+applications:
+- name: reddit-stats 
+  buildpack: java_buildpack
+  memory: 1024M
+  instances: 1
+  random-route: false
+  path: target/reddit-stats-0.0.1-SNAPSHOT.jar
