@@ -14,7 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@Ignore
 public class ScheduleRepositoryTests {
     @Autowired
     private TestEntityManager entityManager;
@@ -22,4 +21,14 @@ public class ScheduleRepositoryTests {
     @Autowired
     private ScheduleRepository schedules;
 
+    @Test
+    public void testFindByTitle() {
+        Schedule schedule = new Schedule();
+        schedule.setTitle("testTitle");
+        entityManager.persist(schedule);
+
+        List<Schedule> findByTitle = schedules.findByTitle(schedule.getTitle());
+
+        assertThat(findByTitle).extracting(Schedule::getTitle).containsOnly(schedule.getTitle());
+    }
 }

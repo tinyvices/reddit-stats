@@ -29,13 +29,7 @@ public class ScheduleController {
         List<Schedule> schedules = new ArrayList<>();
         repository.findAll().forEach(schedules::add);
 
-
-        if (!schedules.stream().map(Schedule::getTitle).collect(Collectors.toList()).contains(newSchedule.getTitle())) {
-            return repository.save(newSchedule);
-
-        }
-
-        return null;
+        return repository.save(newSchedule);
     }
 
     @GetMapping("/schedules/{id}")
