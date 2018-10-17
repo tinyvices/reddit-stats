@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Please use this thread to have discussions which you don't feel warrant a new post to the sub. While the Rules for posting questions on the basics of personal finance/investing topics are relaxed a little bit here, the rules against memes/spam/self-promotion/excessive rudeness/politics still apply!\n\nHave a look at the [FAQ](https://www.reddit.com/r/financialindependence/wiki/faq) for this subreddit before posting to see if your question is frequently asked. \n\nSince this post does tend to get busy, consider sorting the comments by \"new\" (instead of \"best\" or \"top\") to see the newest posts.",
+    "repeat": "1 day",
+    "sticky": true,
+    "first": "July 23, 2015 2:00 AM -06",
+    "title": "Daily FI discussion thread - {{date %B %d, %Y}}"
+  },
+  {
+    "repeat": "1 weeks",
+    "title": "Weekly FI Monday Milestone thread - {{date %B %d, %Y}}",
+    "distinguish": true,
+    "text": "Please use this thread to post your milestones, humblebrags and status updates which you don't feel warrant a new post to the sub. While the Rules for posting questions on the basics of personal finance/investing topics are relaxed a little bit here, the rules against memes/spam/self-promotion/excessive rudeness/politics still apply!\n\nSince this post does tend to get busy, consider sorting the comments by \"new\" (instead of \"best\" or \"top\") to see the newest posts.",
+    "first": "November 23, 2015 2:01 AM -06",
+    "sticky": true
+  },
+  {
+    "repeat": "1 weeks",
+    "title": "Weekly FI Frugal Friday thread - {{date %B %d, %Y}}",
+    "distinguish": true,
+    "text": "Please use this thread to discuss how amazingly cheap you are. How do you keep your costs low? How do become frugal without taking it to the extremes of frupidity? What costs have you realized could be cut from your life without pain? Use this weekly post to discuss Frugality in general. While the Rules for posting questions on the basics of personal finance/investing topics are more relaxed here, the rules against memes/spam/self-promotion/excessive rudeness/politics still apply!\n\nSince this post does tend to get busy, consider sorting the comments by \"new\" (instead of \"best\" or \"top\") to see the newest posts.",
+    "first": "May 20, 2016 2:01 AM -06",
+    "sticky": true
+  },
+  {
+    "text": "Self-promotion (ie posting about projects/businesses that you operate and can profit from) is typically a practice that is discouraged in /r/financialindependence, and these posts are removed through moderation.  This is a thread where those rules *do not* apply. **However**, please do not post referral links in this thread. \n\nUse this thread to talk about your blog, talk about your business, ask for feedback, etc. If the self-promotion starts to leak outside of this thread, we will once again return to a time where 100% of self-promotion posts are banned. Please use this space wisely. \n\n**Link-only posts will be removed. Put some effort into it.**    ",
+    "repeat": "1 weeks",
+    "sticky": true,
+    "first": "March 1, 2017 2:01 AM -06",
+    "title": "Weekly Self-Promotion Thread - {{date %B %d, %Y}}"
+  }
+]
