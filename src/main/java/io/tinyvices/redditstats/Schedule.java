@@ -1,11 +1,9 @@
 package io.tinyvices.redditstats;
 
 import lombok.Data;
+import org.hibernate.annotations.Type;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -16,6 +14,8 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Lob
+    @Type(type = "org.hibernate.type.TextType")
     private String text;
     private String repeat;
     private boolean sticky;

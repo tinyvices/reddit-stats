@@ -10,3 +10,4 @@ public class RedditStatsApplication {
 		SpringApplication.run(RedditStatsApplication.class, args);
 	}
 }
+

@@ -26,9 +26,6 @@ public class ScheduleController {
     @PostMapping("/schedules")
     Schedule newSchedule(@RequestBody Schedule newSchedule) {
 
-        List<Schedule> schedules = new ArrayList<>();
-        repository.findAll().forEach(schedules::add);
-
         return repository.save(newSchedule);
     }
 

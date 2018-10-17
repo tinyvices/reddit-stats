@@ -81,4 +81,16 @@ public class ScheduleControllerTests {
 
         verify(repository, times(1)).save(any());
     }
+
+    @Test
+    public void addScheduleTwo() throws Exception {
+        String jsonIn = new String(Files.readAllBytes(Paths.get("src/test/resources/automoderatorScheduleTwo.json")));
+
+        mvc.perform( post("/schedules")
+                .content(jsonIn)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+        verify(repository, times(1)).save(any());
+    }
 }
