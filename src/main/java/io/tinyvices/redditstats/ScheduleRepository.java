@@ -7,4 +7,5 @@ import java.util.List;
 public interface ScheduleRepository extends CrudRepository<Schedule, Long> {
 
         List<Schedule> findByTitle(String title);
+        List<Schedule> findBySubreddit(String subreddit);
 }

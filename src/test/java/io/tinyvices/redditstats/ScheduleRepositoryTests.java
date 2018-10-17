@@ -31,4 +31,15 @@ public class ScheduleRepositoryTests {
 
         assertThat(findByTitle).extracting(Schedule::getTitle).containsOnly(schedule.getTitle());
     }
+    @Test
+    public void testFindBySubreddit() {
+        Schedule schedule = new Schedule();
+        schedule.setTitle("testTitle");
+        schedule.setSubreddit("testSubreddit");
+        entityManager.persist(schedule);
+
+        List<Schedule> findBySubreddit = schedules.findBySubreddit(schedule.getSubreddit());
+
+        assertThat(findBySubreddit).extracting(Schedule::getSubreddit).containsOnly(schedule.getSubreddit());
+    }
 }

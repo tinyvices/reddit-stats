@@ -1,5 +1,6 @@
 package io.tinyvices.redditstats;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
@@ -23,4 +24,6 @@ public class Schedule {
     private String first;
     private String title;
 
+    @JsonIgnore
+    private String subreddit;
 }

@@ -74,7 +74,7 @@ public class ScheduleControllerTests {
     public void addSchedule() throws Exception {
         String jsonIn = new String(Files.readAllBytes(Paths.get("src/test/resources/automoderatorSchedule.json")));
 
-        mvc.perform( post("/schedules")
+        mvc.perform( post("/schedules/test")
                 .content(jsonIn)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
@@ -86,7 +86,7 @@ public class ScheduleControllerTests {
     public void addScheduleTwo() throws Exception {
         String jsonIn = new String(Files.readAllBytes(Paths.get("src/test/resources/automoderatorScheduleTwo.json")));
 
-        mvc.perform( post("/schedules")
+        mvc.perform( post("/schedules/test")
                 .content(jsonIn)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());

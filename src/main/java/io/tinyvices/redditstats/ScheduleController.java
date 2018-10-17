@@ -19,13 +19,16 @@ public class ScheduleController {
     }
 
     @GetMapping("/schedules")
-    Iterable<Schedule> all() {
+    Iterable<Schedule> all(@RequestParam String subreddit) {
+        if ( subreddit != null )
+            return this.repository.findBySubreddit(subreddit);
         return this.repository.findAll();
     }
 
-    @PostMapping("/schedules")
-    Schedule newSchedule(@RequestBody Schedule newSchedule) {
+    @PostMapping("/schedules/{subreddit}")
+    Schedule newSchedule(@PathVariable String subreddit, @RequestBody Schedule newSchedule) {
 
+        newSchedule.setSubreddit(subreddit);
         return repository.save(newSchedule);
     }
 
