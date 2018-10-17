@@ -22,7 +22,8 @@ public class LoadDatabase {
     CommandLineRunner initDatabase(ScheduleRepository schedules, ThreadRepository threads, CommentRepository comments) throws IOException {
         String jsonIn = new String(Files.readAllBytes(Paths.get("src/test/resources/automoderatorScheduleList.json")));
 
-        List<Schedule> loadSchedules = mapper.readValue(jsonIn, new TypeReference<List<Schedule>>() {}) ;
+        List<Schedule> loadSchedules = mapper.readValue(jsonIn, new TypeReference<List<Schedule>>() {});
+        loadSchedules.forEach(s -> s.setSubreddit("financialindependence"));
         return args -> {
             log.info("Preloading schedules");
             schedules.saveAll(loadSchedules);
